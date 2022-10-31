@@ -18,12 +18,6 @@ module.exports= [
         recipe_id: 4, 
         updated_at: "2022-09-20 7:28"}, 
     {
-        id: 5, 
-        content: "Do you have any tips?", 
-        user_id: 3, 
-        recipe_id: 5, 
-        updated_at: "2022-09-20 18:50"}, 
-    {
         id: 7, 
         content: "This looks easy..", 
         user_id: 4, 
@@ -42,12 +36,6 @@ module.exports= [
         recipe_id: 4, 
         updated_at: "2022-09-20 21:07"}, 
     {
-        id: 10, 
-        content: "You're too good at this", 
-        user_id: 2, 
-        recipe_id: 5, 
-        updated_at: "2022-09-21 12:39"}, 
-    {
         id: 12, 
         content: "AMAZING", 
         user_id: 4, 
@@ -59,10 +47,4 @@ module.exports= [
         user_id: 3, 
         recipe_id: 3, 
         updated_at: "2022-09-21 12:42"}, 
-    {
-        id: 15, 
-        content: "Gonna make this tonight!", 
-        user_id: 4, 
-        recipe_id: 5, 
-        updated_at: "2022-09-21 12:55"}
     ]

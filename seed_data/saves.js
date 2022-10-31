@@ -10,11 +10,6 @@ module.exports = [
         recipe_id: 4, 
         updated_at: "2022-09-21 11:12"}, 
     {
-        id: 3, 
-        user_id: 3, 
-        recipe_id: 5, 
-        updated_at: "2022-09-24 9:53"}, 
-    {
         id: 4, 
         user_id: 1, 
         recipe_id: 4, 
