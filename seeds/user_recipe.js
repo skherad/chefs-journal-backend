@@ -1,5 +1,5 @@
-const usersData = require('../seed_data/users');
-const recipesData = require('../seed_data/recipes');
+const usersData = require('../seed_data/users-heroku');
+const recipesData = require('../seed_data/recipes-heroku');
 const commentsData = require('../seed_data/comments');
 const savesData = require('../seed_data/saves');
 const ingredientsData = require('../seed_data/ingredients');

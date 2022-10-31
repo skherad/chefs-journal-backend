@@ -36,15 +36,6 @@ module.exports = [
         photo: "https://chefs-journal-api.herokuapp.com/public/PancakeBerries.png", 
         updated_at: "2022-09-22 7:28"}, 
     {
-        id: 5, 
-        title: "Tuna Salad Sandwich", 
-        instructions: "1. Boil 2 medium potatoes for 20mins, cut into cubes once cooked-2. In a large bowl, mix a can of tuna with potatoes, cilantro, salt, pepper and mayo-3. Heat up a skillet with butter, add tuna mixture to two toast breads, and place into the skilled, cooked for 2 mins on each side!", 
-        user_id: 5, 
-        likes: 10, 
-        category: "Lunch", 
-        photo: "https://chefs-journal-api.herokuapp.com/public/TunaSalad.png", 
-        updated_at: "2022-09-20 7:28"}, 
-    {
         id: 6, 
         title: "Garlic Green Beans", 
         instructions: "1. Heat up some oil-2. Add the garlic, once soften and fragrant, add the remaining ingredients-3. Add splash of water, close the lid immediatley-4. Cook for 5 mins", 
@@ -80,15 +71,6 @@ module.exports = [
         category: "Lunch", 
         photo: "https://chefs-journal-api.herokuapp.com/public/TunaPokeBowl.png", 
         updated_at: "2022-09-21 8:50"}, 
-    {
-        id: 10, 
-        title: "Healthy Fried Rice", 
-        instructions: "1. In a large non-stick wok or skillet, heat 1 1/2 tsp sesame oil and 1 1/2 tsp of the coconut oil over medium-high heat. Once hot, add chicken pieces, season lightly with salt and pepper and sauté until cooked through, about 5 to 6 minutes. Transfer chicken to a plate and set aside.-2. In separate, small skillet, add 1⁄2 tsp. coconut oil and scramble eggs. Remove from heat and set aside.-3. Return large skillet to medium-high heat, add remaining 1 1/2 tsp sesame oil and 1 tsp coconut oil. Add peas, carrots and onions and sauté 1 minute. Add garlic and sauté 1 minute longer. Return chicken and eggs to skillet along with rice and quinoa mix. Add in coconut aminos and season with salt and pepper to taste.", 
-        user_id: 5, 
-        likes: 5, 
-        category: "Lunch", 
-        photo: "https://chefs-journal-api.herokuapp.com/public/FriedRice.png", 
-        updated_at: "2022-09-24 8:50"}, 
     {
         id: 11, 
         title: "Banana Protein Muffins", 

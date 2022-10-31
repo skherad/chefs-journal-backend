@@ -1,8 +1,8 @@
 const passport = require('passport')
 const knex = require('knex')(require('../knexfile'));
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-
-const GOOGLE_CALLBACK_URL = "http://localhost:5050/auth/google/callback";
+const clinetUrl = process.env.CIENT_URL
+const GOOGLE_CALLBACK_URL = `${clinetUrl}/auth/google/callback`;
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,

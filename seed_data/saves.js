@@ -34,9 +34,4 @@ module.exports = [
         user_id: 4, 
         recipe_id: 7, 
         updated_at: "2022-09-24 9:53"}, 
-    {
-        id: 8, 
-        user_id: 5, 
-        recipe_id: 6, 
-        updated_at: "2022-09-24 9:53"}
     ]

@@ -27,11 +27,4 @@ module.exports= [
         name: "Shahrzad", 
         avatar_url: "https://chefs-journal-api.herokuapp.com/public/chef-hat.png", 
         updated_at: "2022-09-23 13:06"}, 
-    {
-        id: 5, 
-        google_id: 112140600779294176850, 
-        username: "HomeCook", 
-        name: "HomeCook", 
-        avatar_url: "https://chefs-journal-api.herokuapp.com/public/chef-hat.png", 
-        updated_at: "2022-09-23 16:55"}
     ]
