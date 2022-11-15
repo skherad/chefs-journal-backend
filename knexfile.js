@@ -8,5 +8,6 @@ module.exports = {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       port: 25060,
+      sslmode: REQUIRED,
   }
 };
