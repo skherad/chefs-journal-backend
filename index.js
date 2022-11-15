@@ -13,7 +13,7 @@ app.use(express.json());
 // Enable CORS (with additional config options required for cookies)
 app.use(
   cors({
-    origin: true,
+    origin: "https://chefsjournal-api-vxg2v.ondigitalocean.app/",
     credentials: true,
   })
 );
@@ -24,9 +24,11 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
+    cookie: { secure: true }
   })
 );
 
+app.set('trust proxy', 1) 
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(fileUpload());
