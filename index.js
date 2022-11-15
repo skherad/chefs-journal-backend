@@ -13,7 +13,7 @@ app.use(express.json());
 // Enable CORS (with additional config options required for cookies)
 app.use(
   cors({
-    origin: "https://chefsjournal-4bpmj.ondigitalocean.app",
+    origin: "https://chefsjournal-api-vxg2v.ondigitalocean.app",
     credentials: true,
   })
 );
