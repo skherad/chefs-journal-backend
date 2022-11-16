@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5050;
 const expressSession = require('express-session');
 const passport = require('passport');
 const fileUpload = require('express-fileupload');
+const APP_URL = process.env.APP_URL
 
 require("./auth/passportGoogleSSO");
 
@@ -13,7 +14,7 @@ app.use(express.json());
 // Enable CORS (with additional config options required for cookies)
 app.use(
   cors({
-    origin: "https://chefsjournal-4bpmj.ondigitalocean.app",
+    origin: APP_URL,
     credentials: true,
   })
 );

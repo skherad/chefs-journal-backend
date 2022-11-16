@@ -1,8 +1,8 @@
 const passport = require('passport')
 const knex = require('knex')(require('../knexfile'));
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-// const clinetUrl = process.env.CIENT_URL
-const GOOGLE_CALLBACK_URL = `https://chefsjournal-api-vxg2v.ondigitalocean.app/auth/google/callback`;
+const API_URL = process.env.API_URL
+const GOOGLE_CALLBACK_URL = `${API_URL}/auth/google/callback`;
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
