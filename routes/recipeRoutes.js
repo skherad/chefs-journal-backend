@@ -4,7 +4,8 @@ const recipeController = require('../controllers/recipeController');
 router
     .route('/')
     .get(recipeController.index)
-    .post(recipeController.newRecipe);
+    .post(recipeController.newRecipe)
+    .put(recipeController.updateRecipe);
 
 router
     .route('/:userId')
@@ -24,6 +25,10 @@ router
     .get(recipeController.singleRecipe)
     .post(recipeController.saveRecipe)
     .delete(recipeController.deleteRecipe)
+
+router
+    .route('/unSave')
+    .delete(recipeController.unSaveRecipe)
 
 router
     .route('/library/:userId')

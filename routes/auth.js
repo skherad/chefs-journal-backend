@@ -7,11 +7,11 @@ router.get('/google', passport.authenticate('google', {scope: ['profile', 'email
 router.get(
     '/google/callback',
     passport.authenticate('google', {
-        failureRedirect: `${process.env.CLIENT_URL}/auth-fail`,
+        failureRedirect: `${process.env.APP_URL}/auth-fail`,
       }),
     (req, res) => {
         console.log("user:", req.user)
-        res.redirect(`${process.env.CLIENT_URL}/profile`);
+        res.redirect(`${process.env.APP_URL}/profile`);
     }
 )
 
@@ -39,7 +39,7 @@ router.get('/logout', (req, res) => {
             return res.status(500).json({message: "Server error, please try again later", error: error});
         }
         // Redirect the user back to client-side application
-        res.redirect(process.env.CLIENT_URL);
+        res.redirect(process.env.APP_URL);
     });
   });
 

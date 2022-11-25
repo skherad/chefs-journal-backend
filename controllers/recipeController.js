@@ -77,6 +77,18 @@ exports.saveRecipe = (req, res) => {
   .catch(err => console.log(err))
 }
 
+exports.unSaveRecipe = (req, res) => {
+  console.log(req)
+  knex('saves')
+  .where('recipe_id', req.body.recipe_id)
+  .andWhere( 'user_id', req.body.user_id)
+  .del()
+  .then((data)=>{
+    res.status(201).json(data[0])
+  })
+  .catch(err => console.log(err))
+}
+
 exports.library = (req, res) => {
   knex.select('recipes.id')
   .from('recipes')
@@ -89,7 +101,6 @@ exports.library = (req, res) => {
 }
 
 exports.newRecipe = (req, res) => {
-  // console.log(req.body)
   const {data} = req.file.foodpic;
 
   let newRecipe = {
@@ -118,6 +129,47 @@ exports.newRecipe = (req, res) => {
   })
   .catch(err=>console.log(err))
 }
+
+exports.updateRecipe = (req, res) => {
+
+  let updateRecipe = {
+    id: req.body.id,
+    title: req.body.title,
+    instructions: req.body.instructions,
+    category: req.body.category,
+  }
+  
+  knex('recipes')
+  .where('id', updateRecipe.id)
+  .update({
+    title: updateRecipe.title,
+    instructions: updateRecipe.instructions,
+    category: updateRecipe.category
+  })
+  .then(data=>{
+    res.status(201).json(data)
+    knex('recipe_ingredient')
+    .where('recipe_id', req.body.id)
+    .del()
+    .then(data=>{
+      let updateIngredient = [];
+      req.body.ingredients.map(ingredient=>updateIngredient.push(
+        {
+          ingredient_id: ingredient.value,
+          qty: ingredient.qty,
+          unit: ingredient.unit,
+          recipe_id: req.body.id
+        }
+      ))
+      knex('recipe_ingredient').insert(updateIngredient)
+      .then(data=>res.status(201).json(data))
+      .catch(err=>console.log(err))
+    
+    })
+    .catch(err=>console.log(err))
+    })
+  .catch(err=>console.log(err))
+  }
 
 exports.deleteRecipe = (req, res) => {
   knex('recipes')
