@@ -1,5 +1,6 @@
 const knex = require('knex')(require('../knexfile'));
 uniqid = require('uniqid');
+const API_URL = process.env.API_URL
 
 // get all recipes
 exports.index = (_req, res) => {
@@ -101,14 +102,14 @@ exports.library = (req, res) => {
 }
 
 exports.newRecipe = (req, res) => {
-  const {data} = req.file.foodpic;
+  // const {data} = req.file.foodpic;
 
   let newRecipe = {
     title: req.body.title,
     instructions: req.body.instructions,
     user_id: req.body.user_id,
     category: req.body.category,
-    photo: data
+    photo: `${API_URL}/public/menu.png`
   }
 
   knex('recipes').insert(newRecipe)
