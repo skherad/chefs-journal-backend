@@ -25,11 +25,14 @@ app.use(
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
+    // TODO ^ uncomment for prod
     cookie: { 
       sameSite: "none",
       httpOnly: false,
       secure: true
     }
+    // TODO ^ uncomment for prod
+
   })
 );
 

@@ -7,7 +7,9 @@ module.exports = {
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
+      // TODO ^ uncomment for prod
       port: 25060,
+      // TODO ^ uncomment for prod
       ssl: true,
   }
 };
