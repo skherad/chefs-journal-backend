@@ -26,11 +26,11 @@ app.use(
     resave: false,
     saveUninitialized: true,
     // TODO ^ uncomment for prod
-    cookie: { 
-      sameSite: "none",
-      httpOnly: false,
-      secure: true
-    }
+    // cookie: { 
+    //   sameSite: "none",
+    //   httpOnly: false,
+    //   secure: true
+    // }
     // TODO ^ uncomment for prod
 
   })

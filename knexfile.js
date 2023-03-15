@@ -8,8 +8,8 @@ module.exports = {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
       // TODO ^ uncomment for prod
-      port: 25060,
+      // port: 25060,
       // TODO ^ uncomment for prod
-      ssl: true,
+      // ssl: true,
   }
 };
